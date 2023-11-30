@@ -16,7 +16,6 @@ html {
   font-family: "Fira Sans Condensed", "Arial", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  overflow: hidden;
 }
 
 h1,
@@ -49,11 +48,15 @@ ol {
 }
 
 .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  padding: 133px 30px;
+
 }
 
 .result {
@@ -191,16 +194,6 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  background-color: #fff;
-  inline-size: 17px;
-  block-size: 17px;
-  border: none;
-  outline-offset: 1px;
-  outline: 1px solid #fff;
-  margin-right: 2px;
-}
-
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   background-color: #fff;
   inline-size: 17px;
@@ -255,8 +248,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;
-  overflow-x: auto;
-  overflow-y: scroll;
+  overflow: auto;
   position: relative;
 }
 
