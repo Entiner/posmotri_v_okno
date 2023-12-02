@@ -177,6 +177,9 @@ ol {
 
 .search-form__label {
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .search-form__label:hover {
@@ -192,22 +195,22 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  background-color: #fff;
-  inline-size: 17px;
-  block-size: 17px;
-  border: none;
-  outline-offset: 1px;
-  outline: 1px solid #fff;
-  margin-right: 2px;
+.search-form__pseudo-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 
-.search-form__pseudo-checkbox {
-  display: inline-block;
-  inline-size: 18px;
-  block-size: 18px;
-  border: 1px solid #fff;
-  vertical-align: middle;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
 }
 
 .search-form__submit-button {
